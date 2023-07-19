@@ -1,6 +1,4 @@
-# project.scalp-diagnosis
-
-2022.7
+# project.scalp-diagnosis (2022.7)
 
 두피 질환 6종에 대해 6개의 모델로 진단 
 
