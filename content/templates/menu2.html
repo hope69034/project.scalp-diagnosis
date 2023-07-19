@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Dignosis{% endblock %}
+{% block additional_head %}
+<style>
+    td {
+        text-align: center;
+    }
+</style>
+{% endblock %}
+{% block subtitle %}
+<strong>웹캠으로 사진을 찍어 업로드하세요.</strong>
+{% endblock %}
+{% block content %}
+<div id="camera-container">
+    <video id="camera-stream" autoplay></video>
+    <button id="capture-btn" class="btn btn-primary">사진 찍기</button>
+</div>
+<form id="upload-form" action="/menu" method="POST" enctype="multipart/form-data">
+    <input type="hidden" id="image-data" name="image_data">
+    <button id="upload-btn" type="submit" class="btn btn-primary" disabled>업로드</button>
+</form>
+{% endblock %}
+{% block additional_body %}
+<script>
+    // 웹캠 스트림 가져오기
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+            var video = document.getElementById('camera-stream');
+            video.srcObject = stream;
+        })
+        .catch(function (error) {
+            console.log('웹캠을 사용할 수 없습니다:', error);
+        });
+
+    // 사진 찍기 버튼 이벤트 처리
+    var captureBtn = document.getElementById('capture-btn');
+    captureBtn.addEventListener('click', function () {
+        var video = document.getElementById('camera-stream');
+        var canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        var imageData = canvas.toDataURL('image/jpeg');
+        document.getElementById('image-data').value = imageData;
+        document.getElementById('upload-btn').disabled = false;
+        canvas.remove();
+    });
+</script>
+{% endblock %}
