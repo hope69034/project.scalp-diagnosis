@@ -13,3 +13,11 @@ model6 : 탈모 학습
 1 : 경증
 2 : 중등도
 3 : 중증
+
+- train, validation 데이터
+https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=216
+다운로드 (50GB중 원천데이터)
+
+- test 데이터 
+https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=216
+샘플데이터 (원천데이터)
