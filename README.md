@@ -16,8 +16,8 @@ model6 : 탈모 학습
 
 - train, validation 데이터
 https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=216
-다운로드 (50GB중 원천데이터)
+50GB 원천데이터
 
 - test 데이터 
 https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=216
-샘플데이터 (원천데이터)
+샘플데이터 
