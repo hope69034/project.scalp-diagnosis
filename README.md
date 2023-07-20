@@ -1,6 +1,9 @@
 # project.scalp-diagnosis (2022.7)
 
 두피 질환 6종에 대해 6개의 모델로 진단 
+<br>
+![image](https://github.com/hope69034/project.scalp-diagnosis/assets/108075604/07f98edb-b5df-4c7f-b701-0b5ff95e653f)
+<br>
 
 model1 : 미세각질 학습<br>
 model2 : 피지과다 학습<br>
